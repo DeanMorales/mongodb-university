@@ -1,0 +1,48 @@
+# Configuración personal de Kiro (puede contener credenciales)
+.kiro/settings/
+
+# Archivos temporales del sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Archivos de editor
+*.swp
+*.swo
+*~
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Node modules (si llegas a usar JavaScript/TypeScript)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos de respaldo
+*.bak
+*.backup
+*~
+
+# Carpetas de salida
+dist/
+build/
+out/
+
+# Archivos de entorno que pueden contener secretos
+.env
+.env.local
+.env.*.local
+
+# INCLUIR estos archivos de Kiro (comentarios para claridad)
+# .kiro/hooks/ - Hooks del proyecto (INCLUIR)
+# .kiro/steering/ - Reglas de steering (INCLUIR)
+# .kiro/README.md - Documentación (INCLUIR)
