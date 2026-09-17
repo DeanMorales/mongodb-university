@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "MongoDB Documentation Enhancer",
+      "trigger": "UserPromptSubmit",
+      "description": "Mejora documentos Markdown con formato profesional, índice, conceptos ampliados, corrección gramatical y fuentes citadas",
+      "matcher": "mejorar documento|enhance document|fix markdown",
+      "action": {
+        "type": "agent",
+        "prompt": "Cuando el usuario solicite mejorar un documento Markdown de MongoDB University, aplica las siguientes transformaciones al archivo activo en el editor:\n\n1. **Estructura del encabezado**: Agregar al inicio del documento:\n   - Título principal (# Título del Documento)\n   - Fecha de actualización en formato: `**Última actualización:** DD de Mes de YYYY`\n   - Descripción breve del contenido (2-3 líneas máximo)\n\n2. **Índice (Table of Contents)**: Crear un índice completo después del encabezado con enlaces a todas las secciones principales y subsecciones usando el formato:\n   ```markdown\n   ## Índice\n   - [Sección 1](#sección-1)\n     - [Subsección 1.1](#subsección-11)\n   ```\n\n3. **Mejores prácticas de Markdown**:\n   - Usar títulos jerárquicos correctamente (##, ###, ####)\n   - Asegurar líneas en blanco entre secciones\n   - Usar listas con formato consistente\n   - Usar bloques de código con sintaxis highlighting apropiada\n   - Usar énfasis (*cursiva*, **negrita**) de manera apropiada\n\n4. **Sección de Conceptos**: Ampliar cada concepto a mínimo 500 caracteres con:\n   - Definición clara y detallada\n   - Explicación de su importancia en MongoDB\n   - Ejemplo de uso cuando sea posible\n   - Relación con otros conceptos si aplica\n\n5. **Corrección gramatical y estilo**:\n   - Corregir ortografía y gramática en español\n   - Eliminar TODOS los emojis\n   - Usar terminología técnica precisa\n   - Mantener tono profesional y educativo\n\n6. **Bloques de código**: Para cada bloque de código agregar:\n   - Comentarios explicativos línea por línea o por bloques\n   - Indicar qué hace el código\n   - Explicar el propósito del ejemplo\n\n7. **Sección de fuentes**: Crear o completar al final una sección \"## Referencias y Fuentes\" con:\n   - Documentación oficial de MongoDB citada\n   - Enlaces a recursos mencionados en el documento\n   - Formato: `- [Nombre del recurso](URL) - Breve descripción`\n\n8. **Restricciones importantes**:\n   - NO agregar imágenes\n   - NO cambiar el contenido técnico original\n   - Mantener todos los conceptos existentes\n   - Solo mejorar formato, gramática y ampliar explicaciones\n\nAplica todas estas mejoras al documento actual en el editor de manera completa y profesional."
+      }
+    }
+  ]
+}
