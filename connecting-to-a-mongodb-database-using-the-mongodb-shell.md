@@ -120,3 +120,25 @@ The output should look something like this:
 bash
 <MAJOR.MINOR.PATCH>
 For example, if the installed version is 2.10.0, the output will be: 2.10.0
+
+---
+
+## troubleshooting conecctions errors
+
+muchos de los problemas que se generan al conectarse, son debido a las restricciones de seguridad y medidas de autenticacion del propio mongodb
+
+por ejemplo: con nuestra cadena de conexion,, podemos estar ingresando un password erroneo, o un usuarios equivocado. las contraseñas son sensibles a las mayusculas y minusculas
+- si el usuario no existe
+podemos crear  un nuevo usuario de base d e datos. y generar las credenciales para acceder desde mongosh. 
+
+dentro de la consola en la barra izq. en la seccion **security** encontramos nuestros accesos a la base de datos. 
+
+si tarda mucho en conectar, posiblemente sea porque nuestra ip no alcanza la direccon de nuestra instancia atlas. asi que podemos ingresar a la consola UI de Atlas para verificar esta configuracicon,
+
+en acceso a la red, podemos agregar una nueva direccion ip para que nuestro pc pueda entrar al cluster, es como un grupo de seguridad de una instancia. 
+
+- los clusters de Atlas pueden saturarse de conexiones y alcanzar los limites maximos. tienen un maximo de 500 conexiones al mismo tiempo.
+
+debes propbar estos casos en escenarios de desarrollo, podemos resptablecer la aplicaciones. o subir el tier de neustro cluster. 
+
+
